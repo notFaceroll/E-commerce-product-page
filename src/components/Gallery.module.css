@@ -1,0 +1,9 @@
+.gallery {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.gallery img {
+    max-width: 100%;
+
+}
