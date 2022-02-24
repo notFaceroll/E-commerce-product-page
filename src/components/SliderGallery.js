@@ -6,9 +6,19 @@ import classes from './SliderGallery.module.css';
 
 import { imageArr } from './Images';
 
+const baseUrl = '../images/image-product-'
+
 const SliderGallery = () => {
   var settings = {
+    // customPaging: function(i) {
+    //   return (
+    //     <a>
+    //       <img src={imageArr[i].picture.thumbnail} />
+    //     </a>
+    //   );
+    // },
     dots: true,
+    dotsClass: "slick-dots slick-thumb",
     infinite: true,
     speed: 500,
     slidesToShow: 1,
