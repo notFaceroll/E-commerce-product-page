@@ -1,23 +1,19 @@
 import classes from './Product.module.css';
 
-const Product = () => {
+const Product = (props) => {
   return (
     <section className="product">
       <div className="product__text">
         <span className={classes.logo}>sneaker company</span>
-        <h2>Fall Limited Edition Sneakers</h2>
-        <p className={classes.description}>
-          These low-profile sneakers are your perfect casual wear companion.
-          Featuring a durable rubber outer sole, they'll withstand everything
-          the weather can offer.
-        </p>
+        <h2>{props.product.name}</h2>
+        <p className={classes.description}>{props.product.description}</p>
       </div>
       <div className="product__price">
         <div className={classes['discount-box']}>
-          <span className={classes['current-price']}>$125.00</span>
-          <span className={classes.discount}>50%</span>
+          <span className={classes['current-price']}>{`$${props.product.sellPrice}`}</span>
+          <span className={classes.discount}>{`${props.product.discount}%`}</span>
         </div>
-        <span className={classes['old-price']}>$250.00</span>
+        <span className={classes['old-price']}>{`$${props.product.fullPrice}`}</span>
       </div>
       <div className={classes.actions}>
         <div className={classes.quantity}>

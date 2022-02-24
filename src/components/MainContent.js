@@ -3,11 +3,11 @@ import Product from "./Product";
 import classes from './MainContent.module.css'
 import SliderGallery from "./SliderGallery";
 
-const MainContent = () => {
+const MainContent = (props) => {
    return <main className={classes.main}>
        {/* <Gallery /> */}
        <SliderGallery />
-       <Product />
+       <Product product={props.product}/>
    </main>
 };
 

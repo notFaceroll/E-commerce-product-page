@@ -1,0 +1,40 @@
+.header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid hsl(219, 9%, 45%);
+    width: 80vw;
+    margin: 0 auto 5rem;
+}
+
+.header ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.header a {
+    text-decoration: none;
+    color: hsl(219, 9%, 45%);
+}
+
+.header nav {
+    margin-right: auto;
+}
+
+.user-photo {
+    border-radius: 50%;
+    border: 2px solid transparent;
+    width: 45px;
+    height: 45px;
+    margin-left: 2rem;
+    cursor: pointer;
+}
+
+.user-photo:hover {
+    border-color: orange;
+}
+
+.user-photo img{
+    display: block;
+    max-width: 100%;
+}

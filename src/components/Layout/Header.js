@@ -1,6 +1,9 @@
 import classes from './Header.module.css';
+import HeaderCartButton from './HeaderCartButton';
+import Cart from '../Cart/Cart';
+import userPicture from '../../images/image-avatar.png';
 
-const Header = () => {
+const Header = (props) => {
   return (
     <header className={classes.header}>
       <h1>sneakers</h1>
@@ -23,6 +26,11 @@ const Header = () => {
           </li>
         </ul>
       </nav>
+      {props.cartActive && <Cart onClose={props.onClose} />}
+      <HeaderCartButton onShowCart={props.onShowCart}/>
+      <div className={classes['user-photo']}>
+        <img src={userPicture} alt="profile picture" />
+      </div>
     </header>
   );
 };
