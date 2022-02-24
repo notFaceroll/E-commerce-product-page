@@ -7,13 +7,33 @@ import Thumbnail3 from '../images/image-product-3-thumbnail.jpg';
 import Image4 from '../images/image-product-4.jpg';
 import Thumbnail4 from '../images/image-product-4-thumbnail.jpg';
 
-export const imageData = {
-  Image1,
-  Thumbnail1,
-  Image2,
-  Thumbnail2,
-  Image3,
-  Thumbnail3,
-  Image4,
-  Thumbnail4,
-};
+export const imageArr = [
+  {
+    id: 'img1',
+    picture: {
+      original: Image1,
+      thumbnail: Thumbnail1,
+    },
+  },
+  {
+    id: 'img2',
+    picture: {
+      original: Image2,
+      thumbnail: Thumbnail2,
+    },
+  },
+  {
+    id: 'img3',
+    picture: {
+      original: Image3,
+      thumbnail: Thumbnail3,
+    },
+  },
+  {
+    id: 'img4',
+    picture: {
+      original: Image4,
+      thumbnail: Thumbnail4,
+    },
+  },
+];

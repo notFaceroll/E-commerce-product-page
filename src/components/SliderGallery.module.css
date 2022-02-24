@@ -1,0 +1,15 @@
+.pager {
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: aqua;
+}
+
+.pager img {
+    display: block;
+    max-width: 100%;
+}
+
+.card {
+    width: 50%;
+}
+

@@ -1,9 +1,23 @@
 .gallery {
-    border-radius: 20px;
-    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.focused {
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .gallery img {
-    max-width: 100%;
+  max-width: 100%;
+}
 
+.pager {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.pager li {
+  border-radius: 20px;
 }
