@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Header from './components/Layout/Header';
 import MainContent from './components/MainContent';
+import CartProvider from './store/CartProvider';
 
 
 const objData = {
@@ -24,15 +25,20 @@ function App() {
     setCartIsVisible(false);
   };
 
+  const cartWindow = () => {
+    setCartIsVisible(!cartIsVisible);
+  }
+
   return (
-    <>
+    <CartProvider>
       <Header
         cartActive={cartIsVisible}
-        onShowCart={showCart}
+        onShowCart={cartWindow}
         onClose={hideCart}
+        product={objData}
       />
       <MainContent product={objData}/>
-    </>
+    </CartProvider>
   );
 }
 

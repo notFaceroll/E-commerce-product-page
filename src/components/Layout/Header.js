@@ -26,7 +26,7 @@ const Header = (props) => {
           </li>
         </ul>
       </nav>
-      {props.cartActive && <Cart onClose={props.onClose} />}
+      {props.cartActive && <Cart onClose={props.onClose} product={props.product} />}
       <HeaderCartButton onShowCart={props.onShowCart}/>
       <div className={classes['user-photo']}>
         <img src={userPicture} alt="profile picture" />

@@ -2,7 +2,8 @@ import React from 'react';
 
 const CartContext = React.createContext({
   // a template for autocomplete
-  totalAmount: 0,
+  totalPrice: 0,
+  quantity: 0,
   addItem: (item) => {},
   removeItem: () => {},
 });
