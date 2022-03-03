@@ -23,8 +23,7 @@ const Product = (props) => {
 
   const addToCart = () => {
     const { sellPrice } = objData;
-    cartCtx.addItem({ item: sellPrice, amount: quantity });
-    console.log(objData);
+    cartCtx.addItem({ price: sellPrice, amount: quantity });
   };
 
   const removeQuantityHandler = () => {
@@ -35,13 +34,13 @@ const Product = (props) => {
   };
 
   return (
-    <section className="product">
+    <section className={classes.product}>
       <div className="product__text">
         <span className={classes.logo}>sneaker company</span>
-        <h2>{props.product.name}</h2>
+        <h2 className={classes.name}>{props.product.name}</h2>
         <p className={classes.description}>{props.product.description}</p>
       </div>
-      <div className="product__price">
+      <div className={classes.price}>
         <div className={classes['discount-box']}>
           <span
             className={classes['current-price']}
@@ -57,7 +56,7 @@ const Product = (props) => {
       <div className={classes.actions}>
         <div className={classes.quantity}>
           <button onClick={removeQuantityHandler}>-</button>
-          <span>{quantity}</span>
+          <div>{quantity}</div>
           <button onClick={addQuantityHandler}>+</button>
         </div>
         <button onClick={addToCart} className={classes.add}>

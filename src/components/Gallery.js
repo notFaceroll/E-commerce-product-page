@@ -1,26 +1,37 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
+import { imageArr as data } from './Images';
+
 import classes from './Gallery.module.css';
-import { imageArr } from './Images';
 
 export default function Gallery() {
-  const initialPicture = imageArr[0].picture.original;
-  const [picture, setPicture] = useState(initialPicture);
+  const [current, setCurrent] = useState(0);
 
-  const focusedPictureHandler = (event) => {
-    const selectedImageId = event.target.id;
-    const selectedImg = imageArr.find((img) => img.id == selectedImageId);
-    setPicture(selectedImg.picture.original);
+  const pictureHandler = (event) => {
+    const pictureId = event.target.id;
+    setCurrent(pictureId);
   };
 
   return (
     <div className={classes.gallery}>
-      <div className={classes.focused}>
-        <img src={picture} />
-      </div>
+      {data.map((item, index) => (
+        <div key={index}>
+          <img
+            src={item.picture.original}
+            className={`${classes.hidden} ${
+              current == index ? classes.shown : ''
+            }`}
+          />
+        </div>
+      ))}
+
       <div>
         <ul className={classes.pager}>
-          {imageArr.map((pic) => (
-            <li key={pic.id} onClick={focusedPictureHandler}>
+          {data.map((pic, index) => (
+            <li
+              key={index}
+              onClick={pictureHandler}
+              className={current == index ? classes.active : ''}
+            >
               <img id={pic.id} src={pic.picture.thumbnail} />
             </li>
           ))}

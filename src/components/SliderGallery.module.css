@@ -1,15 +1,29 @@
-.pager {
+.card {
+    width: 50%;
+}
+
+.product {
     border-radius: 20px;
     overflow: hidden;
     background-color: aqua;
 }
 
-.pager img {
+.product img {
     display: block;
     max-width: 100%;
 }
 
-.card {
-    width: 50%;
-}
+
+
+@media screen and (max-width: 900px) {
+    .card {
+        width: 75%;
+    }
+  }
+
+@media screen and (max-width: 600px) {
+    .card {
+        width: 100%;
+    }
+  }
 

@@ -28,7 +28,7 @@ const SliderGallery = () => {
     <div className={classes.card}>
       <Slider {...settings}>
         {imageArr.map((item) => (
-          <div className={classes.pager}>
+          <div className={classes.product}>
             <img src={item.picture.original} />
           </div>
         ))}

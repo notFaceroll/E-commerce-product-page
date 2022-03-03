@@ -3,6 +3,16 @@
   flex-direction: column;
 }
 
+.hidden {
+  display: none; 
+}
+
+.shown {
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+}
+
 .focused {
   border-radius: 20px;
   overflow: hidden;
@@ -13,11 +23,30 @@
 }
 
 .pager {
+  width: 100%;
   display: flex;
   list-style: none;
   padding: 0;
+  justify-content: space-evenly;
+}
+
+.pager img {
+  display: block;
+  max-width: 100%;
 }
 
 .pager li {
   border-radius: 20px;
+  width: 20%;
+  overflow: hidden;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+}
+
+.pager li:hover {
+  opacity: 0.8;
+}
+
+.pager li.active {
+  border-color: orange;
 }

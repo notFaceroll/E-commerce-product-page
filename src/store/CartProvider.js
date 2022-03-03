@@ -10,13 +10,10 @@ const cartReducer = (state, action) => {
   switch (action.type) {
     case 'ADD': {
       const updatedTotalPrice =
-        state.totalPrice + action.item.item * action.item.amount;
-      console.log(action.item.item);
-      console.log(action.item.amount);
-      console.log(updatedTotalPrice);
+        state.totalPrice + action.payload.price * action.payload.amount;
       return {
         totalPrice: updatedTotalPrice,
-        amount: state.amount + action.item.amount,
+        amount: state.amount + action.payload.amount,
       };
     }
     case 'CLEAR': {
@@ -27,8 +24,8 @@ const cartReducer = (state, action) => {
 
 const CartProvider = (props) => {
   const [state, dispatch] = useReducer(cartReducer, defaultCartState);
-  const AddItemToCart = (item) => {
-    dispatch({ type: 'ADD', item: item });
+  const AddItemToCart = (product) => {
+    dispatch({ type: 'ADD', payload: product });
   };
 
   const clearCartHandler = () => {

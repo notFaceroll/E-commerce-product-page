@@ -9,28 +9,28 @@ import Thumbnail4 from '../images/image-product-4-thumbnail.jpg';
 
 export const imageArr = [
   {
-    id: 'img1',
+    id: 0,
     picture: {
       original: Image1,
       thumbnail: Thumbnail1,
     },
   },
   {
-    id: 'img2',
+    id: 1,
     picture: {
       original: Image2,
       thumbnail: Thumbnail2,
     },
   },
   {
-    id: 'img3',
+    id: 2,
     picture: {
       original: Image3,
       thumbnail: Thumbnail3,
     },
   },
   {
-    id: 'img4',
+    id: 3,
     picture: {
       original: Image4,
       thumbnail: Thumbnail4,

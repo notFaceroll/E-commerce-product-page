@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import Header from './components/Layout/Header';
 import MainContent from './components/MainContent';
+import SecondSlider from './components/Slider/SecondSlider';
 import CartProvider from './store/CartProvider';
-
+import ThirdSlider from './components/Slider/ThirdSlider';
+import Swiper from './components/Slider/Swiper';
 
 const objData = {
   id: 'o1',
@@ -38,6 +40,7 @@ function App() {
         product={objData}
       />
       <MainContent product={objData}/>
+      {/* <Swiper /> */}
     </CartProvider>
   );
 }

@@ -1,0 +1,20 @@
+/* .card img {
+    margin: 0 auto;
+} */
+
+.card img {
+    width: 10px;
+}
+
+.vessel {
+    width: 50%;
+}
+
+.list {
+    height: 80px;
+    width: 80vw;
+}
+
+.vessel ul li.slick-active {
+    border: 2px solid orange;
+}

@@ -4,7 +4,7 @@
   text-transform: uppercase;
 }
 
-h2 {
+.name {
   font-size: 3rem;
   font-weight: 700;
 }
@@ -44,6 +44,7 @@ h2 {
   gap: 1rem;
   margin-top: 2rem;
   justify-content: center;
+  flex-wrap: nowrap;
 }
 
 .add {
@@ -62,6 +63,12 @@ h2 {
 .quantity {
   background-color: hsl(223, 64%, 98%);
   font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.quantity div {
+  width: 10px;
 }
 
 .quantity button {
@@ -73,3 +80,48 @@ h2 {
   cursor: pointer;
   font-size: 1.5rem;
 }
+
+@media screen and (max-width: 1200px) {
+  .product {
+    font-size: 0.9rem;
+  }
+
+  .name {
+    font-size: 2.3rem;
+  }
+
+  .current-price {
+    font-size: 1.5rem;
+  }
+
+  .add {
+    font-size: .8rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+
+  .quantity div {
+    width: 100%;
+    text-align: center;
+  }
+
+  .price { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .discount-box {
+    margin-bottom: 0;
+  }
+}
+
+
