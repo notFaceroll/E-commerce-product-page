@@ -17,6 +17,7 @@
   width: 400px;
   border-radius: 10px;
   min-height: 28vh;
+  z-index: 15;
 }
 
 .empty {
@@ -89,4 +90,22 @@
   font-weight: 700;
   font-size: 1rem;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+@media screen and (max-width: 600px) {
+  .cart {
+    gap: 1.5rem;
+    grid-template-rows: 20% 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'cart' 'content';
+    padding: 2rem;
+    position: absolute;
+    background-color: #fff;
+    top: 3rem;
+    right: -23.5vw;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 75vw;
+    border-radius: 8px;
+    min-height: 20vh;
+  }
 }

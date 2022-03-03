@@ -96,14 +96,19 @@
 
   .add {
     font-size: .8rem;
+    padding: 1.25rem 2rem;
   }
 }
 
 @media screen and (max-width: 600px) {
+  .product {
+    padding: 0 1.5rem;
+  }
+
   .actions {
     display: flex;
     gap: 1rem;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     justify-content: center;
     flex-wrap: nowrap;
     flex-direction: column;
@@ -121,6 +126,14 @@
   }
   .discount-box {
     margin-bottom: 0;
+  }
+
+  .name {
+    font-size: 1.8rem;
+    margin: 1rem 0;
+  }
+
+  .logo {
   }
 }
 

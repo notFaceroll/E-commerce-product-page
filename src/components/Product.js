@@ -1,7 +1,7 @@
-import classes from './Product.module.css';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import CartContext from '../store/cart-context';
-import { useContext } from 'react';
+
+import classes from './Product.module.css';
 
 const objData = {
   id: 'o1',
@@ -17,13 +17,13 @@ const Product = (props) => {
   const [quantity, setQuantity] = useState(0);
   const cartCtx = useContext(CartContext);
 
-  const addQuantityHandler = () => {
-    setQuantity(quantity + 1);
-  };
-
   const addToCart = () => {
     const { sellPrice } = objData;
     cartCtx.addItem({ price: sellPrice, amount: quantity });
+  };
+
+  const addQuantityHandler = () => {
+    setQuantity(quantity + 1);
   };
 
   const removeQuantityHandler = () => {

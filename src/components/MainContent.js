@@ -1,25 +1,27 @@
 import Gallery from './Gallery';
 import Product from './Product';
 import classes from './MainContent.module.css';
-import SliderGallery from './SliderGallery';
-import SecondSlider from './Slider/SecondSlider';
-import ThirdSlider from './Slider/ThirdSlider';
-import Swiper from './Slider/Swiper';
+import { useState } from 'react';
 
 import './MainContent.module.css';
-import NewSlider from './Slider/NewSlider';
+import Lightbox from './Lightbox';
 
 const MainContent = (props) => {
+
+  // const [lightbox, setLightbox] = useState(false);
+
+  // const hideLightboxHandler = () => {
+  //   setLightbox(false);
+  // };
+
+  // const showLightboxHandler = () => {
+  //   setLightbox(true);
+  // };
+
   return (
     <main className={classes.main}>
+      {/* {lightbox && <Lightbox onClose={hideLightboxHandler}/>} */}
       <Gallery />
-      {/* <SliderGallery /> */}
-      {/* <SecondSlider /> */}
-      {/* <ThirdSlider /> */}
-      {/* <div className={classes.gallery}>
-        <Swiper />
-      </div> */}
-      {/* <NewSlider /> */}
       <Product product={props.product} />
     </main>
   );

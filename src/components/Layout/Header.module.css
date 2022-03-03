@@ -57,10 +57,30 @@
     .icon {
         display: flex;
         align-items: center;
+        margin-left: 1rem;
     }
 
     .header ul {
         display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header {
+        border-bottom: none;
+        width: 100%;
+        height: 70px;
+        margin: 0;
+        /* padding: 1rem; */
+        justify-content: space-evenly;
+    }
+
+    .user {
+        border-radius: 50%;
+        border: 2px solid transparent;
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
     }
 }
 
