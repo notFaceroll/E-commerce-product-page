@@ -1,10 +1,7 @@
 import { useState } from 'react';
 import Header from './components/Layout/Header';
 import MainContent from './components/MainContent';
-import SecondSlider from './components/Slider/SecondSlider';
 import CartProvider from './store/CartProvider';
-import ThirdSlider from './components/Slider/ThirdSlider';
-import Swiper from './components/Slider/Swiper';
 
 const objData = {
   id: 'o1',
@@ -19,17 +16,13 @@ const objData = {
 function App() {
   const [cartIsVisible, setCartIsVisible] = useState(false);
 
-  const showCart = () => {
-    setCartIsVisible(true);
-  };
-
   const hideCart = () => {
     setCartIsVisible(false);
   };
 
   const cartWindow = () => {
     setCartIsVisible(!cartIsVisible);
-  }
+  };
 
   return (
     <CartProvider>
@@ -39,8 +32,7 @@ function App() {
         onClose={hideCart}
         product={objData}
       />
-      <MainContent product={objData}/>
-      {/* <Swiper /> */}
+      <MainContent product={objData} />
     </CartProvider>
   );
 }

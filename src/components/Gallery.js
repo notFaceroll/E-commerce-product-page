@@ -9,13 +9,12 @@ import previusIcon from '../images/icon-previous.svg';
 export default function Gallery() {
   const [current, setCurrent] = useState(0);
   const [modal, setModal] = useState(false);
-
   const toggleModal = () => {
     setModal(!modal);
   };
 
   const pictureHandler = (event) => {
-    const pictureId = event.target.id;
+    const pictureId = parseInt(event.target.id);
     setCurrent(pictureId);
   };
 
@@ -78,7 +77,9 @@ export default function Gallery() {
           <>
             <Backdrop onClose={toggleModal} />
             <div className={classes.lightbox}>
-              <button className={classes.close} onClick={toggleModal}>X</button>
+              <button className={classes.close} onClick={toggleModal}>
+                X
+              </button>
               <button className={leftBtnClasses} onClick={previusHandler}>
                 <img src={previusIcon} alt="" />
               </button>

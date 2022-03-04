@@ -2,6 +2,8 @@ import { useState, useContext } from 'react';
 import CartContext from '../store/cart-context';
 
 import classes from './Product.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 const objData = {
   id: 'o1',
@@ -60,7 +62,7 @@ const Product = (props) => {
           <button onClick={addQuantityHandler}>+</button>
         </div>
         <button onClick={addToCart} className={classes.add}>
-          Add to cart
+        <FontAwesomeIcon icon={faCartShopping} className={classes.cartIcon}/> &nbsp;Add to cart
         </button>
       </div>
     </section>

@@ -1,11 +1,13 @@
-import classes from './Header.module.css';
-import HeaderCartButton from './HeaderCartButton';
+import { useState } from 'react';
+
 import Cart from '../Cart/Cart';
+import HeaderCartButton from './HeaderCartButton';
+import SideNav from './SideNav';
+
+import classes from './Header.module.css';
 import userPicture from '../../images/image-avatar.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { useState } from 'react';
-import SideNav from './SideNav';
 
 const Header = (props) => {
   const [sideNav, setSideNav] = useState(false);
@@ -14,10 +16,9 @@ const Header = (props) => {
     setSideNav(!sideNav);
   };
 
-
   return (
     <header className={classes.header}>
-      {sideNav && <SideNav onClose={sideNavHandler}/>}
+      {sideNav && <SideNav onClose={sideNavHandler} />}
       <FontAwesomeIcon
         icon={faBars}
         className={classes.icon}
@@ -48,7 +49,7 @@ const Header = (props) => {
       )}
       <HeaderCartButton onShowCart={props.onShowCart} />
       <div className={classes.user}>
-        <img src={userPicture} alt="profile picture" />
+        <img src={userPicture} alt="user profile thumbnail" />
       </div>
     </header>
   );

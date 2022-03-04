@@ -1,8 +1,10 @@
-import classes from './Cart.module.css';
-import CartContext from '../../store/cart-context';
 import { useContext } from 'react';
+import CartContext from '../../store/cart-context';
+
+import classes from './Cart.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
+
 import { imageArr } from './../Images';
 
 const Cart = (props) => {
@@ -24,7 +26,7 @@ const Cart = (props) => {
             <div>
               <div className={classes['cart-content']}>
                 <figure>
-                  <img src={productImage} alt="shoes thumbnail image" />
+                  <img src={productImage} alt="shoes thumbnail" />
                 </figure>
                 <div className={classes['cart-detail']}>
                   <p>{props.product.name}</p>

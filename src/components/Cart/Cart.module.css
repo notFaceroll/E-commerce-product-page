@@ -3,35 +3,35 @@
 }
 
 .cart {
+  background-color: #fff;
   display: grid;
-  gap: 1.5rem;
   grid-template-rows: 20% 1fr;
   grid-template-columns: 1fr;
   grid-template-areas: 'cart' 'content';
+  gap: 1.5rem;
   padding: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
   position: absolute;
-  background-color: #fff;
   top: 2rem;
   right: -8rem;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   width: 400px;
-  border-radius: 10px;
   min-height: 28vh;
   z-index: 15;
 }
 
 .empty {
-  align-self: center;
-  justify-self: center;
   color: hsl(219, 9%, 45%);
   font-size: 1.125rem;
   font-weight: 700;
+  align-self: center;
+  justify-self: center;
 }
 
 .cart figure {
+  overflow: hidden;
   width: 20%;
   border-radius: 10px;
-  overflow: hidden;
   margin: 0;
 }
 
@@ -39,15 +39,15 @@
   grid-area: content;
   display: flex;
   justify-content: center;
-  padding: 0;
-  gap: 1rem;
   align-items: center;
+  gap: 1rem;
+  padding: 0;
 }
 
 .cart-detail {
-  margin-right: auto;
   font-size: 1.125rem;
   font-weight: 400;
+  margin-right: auto;
 }
 
 .cart-detail p {
@@ -56,9 +56,9 @@
 }
 
 .cart-detail span {
-  margin: 0;
   color: hsl(0, 0%, 0%);
   font-weight: 700;
+  margin: 0;
   margin-left: 0.5rem;
 }
 
@@ -68,42 +68,37 @@
 }
 
 .icon {
-  fill: hsl(219, 9%, 45%);
+  /* fill: hsl(219, 9%, 45%); */
   cursor: pointer;
 }
 
 .cart h3 {
+  grid-area: cart;
   font-weight: 700;
-  border-bottom: 1px solid grey;
   margin: 0;
   padding-bottom: 1rem;
-  grid-area: cart;
+  border-bottom: 1px solid grey;
 }
 
 .cart button {
   background-color: hsl(26, 100%, 55%);
   color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
   padding: 1rem 2rem;
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  font-weight: 700;
-  font-size: 1rem;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.cart button:hover {
+  background-color: hsla(26, 100%, 55%, 0.75);
 }
 
 @media screen and (max-width: 600px) {
   .cart {
-    gap: 1.5rem;
-    grid-template-rows: 20% 1fr;
-    grid-template-columns: 1fr;
-    grid-template-areas: 'cart' 'content';
-    padding: 2rem;
-    position: absolute;
-    background-color: #fff;
     top: 3rem;
     right: -23.5vw;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     width: 75vw;
     border-radius: 8px;
     min-height: 20vh;

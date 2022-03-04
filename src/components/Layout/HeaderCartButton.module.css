@@ -1,6 +1,19 @@
 .btn {
-    background-color: transparent;
-    border: none;
-    font-size: 1.125rem;
-    cursor: pointer;
+  background-color: transparent;
+  font-size: 1.125rem;
+  border: none;
+  position: relative;
+  cursor: pointer;
+}
+
+.cartItems {
+  position: absolute;
+  background-color: hsl(26, 100%, 55%);
+  color: #fff;
+  font-size: .6rem;
+  padding: 0 .4rem;
+  border-radius: 100px;
+  top: -30%;
+  right: 0;
+  z-index: 1;
 }
