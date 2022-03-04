@@ -48,6 +48,7 @@ export default function Gallery() {
         {data.map((item, index) => (
           <div key={index}>
             <img
+              alt="Limited Edition Sneakers"
               onClick={toggleModal}
               src={item.picture.original}
               className={`${classes.hidden} ${
@@ -68,7 +69,11 @@ export default function Gallery() {
                 onClick={pictureHandler}
                 className={current == index ? classes.active : ''}
               >
-                <img id={pic.id} src={pic.picture.thumbnail} />
+                <img
+                  id={pic.id}
+                  src={pic.picture.thumbnail}
+                  alt="Limited Edition Sneakers"
+                />
               </li>
             ))}
           </ul>
@@ -86,6 +91,7 @@ export default function Gallery() {
               {data.map((item, index) => (
                 <div key={index}>
                   <img
+                    alt="Limited Edition Sneakers"
                     onClick={toggleModal}
                     src={item.picture.original}
                     className={`${classes.hidden} ${
@@ -106,7 +112,11 @@ export default function Gallery() {
                       onClick={pictureHandler}
                       className={current == index ? classes.active : ''}
                     >
-                      <img id={pic.id} src={pic.picture.thumbnail} />
+                      <img
+                        id={pic.id}
+                        src={pic.picture.thumbnail}
+                        alt="Limited Edition Sneakers"
+                      />
                     </li>
                   ))}
                 </ul>
