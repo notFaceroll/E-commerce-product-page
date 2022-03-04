@@ -22,7 +22,7 @@
   position: fixed;
   top: 10%;
   left: 30%;
-  width: 40%;
+  width: min(600px, 40%);
   margin: 0 auto;
   z-index: 300;
 }
